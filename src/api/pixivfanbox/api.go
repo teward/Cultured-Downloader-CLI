@@ -119,6 +119,7 @@ func getCreatorPaginatedPosts(creatorId string, dlOptions *PixivFanboxDlOptions)
 		utils.PIXIV_FANBOX_API_URL,
 	)
 	useHttp3 := utils.IsHttp3Supported(utils.PIXIV_FANBOX, true)
+	fmt.Println(url, params, headers)
 	res, err := request.CallRequest(
 		&request.RequestArgs{
 			Method:    "GET",
